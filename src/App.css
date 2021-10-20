@@ -1,0 +1,151 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #503A87;
+	font-family: 'AxiformaRegular', sans-serif;
+	color: #000000;
+	font-size: 16px;
+}
+
+.App {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	margin: 0;
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #000;
+}
+
+a,
+select,
+input,
+textarea,
+button {
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+.c_custom {
+	max-width: 1440px !important;
+}
+
+/* colors */
+.c-tag-1{
+	color: #000000 !important;
+}
+
+.c-tag-2{
+	color: #FFFFFF !important;
+}
+
+/* bg */
+.bg-tag-1 {
+	background-color: white;
+}
+
+.btn-tag-1 {
+    background-image: linear-gradient(rgb(243 243 243), #56BFE4);
+    box-shadow: rgb(0 0 0 / 36%) 1px 4px 4px, rgb(0 0 0 / 40%) 0px -5px 0px inset;
+    border-bottom-color: rgb(229, 229, 229);
+    padding: 10px 30px;
+    border-radius: 8px;
+    color: #212529;
+}
+
+.btn-tag-1:hover {
+    background-image: linear-gradient(#171717, #262626);
+    color:white;
+}
+
+
+/* fonts */
+.lit-20{
+	font-family: 'AxiformaLight', sans-serif;
+	font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.reg-48{
+	font-family: 'AxiformaRegular', sans-serif;
+	font-size: 3rem;
+    line-height: 3.75rem;
+}
+
+.reg-28{
+	font-family: 'AxiformaRegular', sans-serif;
+	font-size: 1.75rem;
+}
+
+.semi-28{
+	font-family: 'AxiformaSemiBold', sans-serif;
+	font-size: 1.75rem;
+}
+
+.medi-30{
+	font-family: 'AxiformaMedium', sans-serif;
+	font-size: 1.875rem;
+	line-height: 2.75rem;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    body, html{
+		font-size: 14px;
+	}
+}
+  
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    body, html{
+		font-size: 14px;
+	}
+  }
+  
+  /* Medium devices(sm) (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    body, html{
+		font-size: 14px;
+	}
+  }
+  
+  /* Large devices(md) (desktops, 992px and up) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+	body, html{
+		font-size: 14px;
+	}
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+  }
+  
