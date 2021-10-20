@@ -23,7 +23,7 @@ const RideSearch = () => {
                                             <p className="ride-title mb-5 medi-30"> <strong>Ready to roll?</strong><br/>Get your estimation.</p>
                                         </Col>
                                         <Col md={12}>
-                                            <p className="mb-3"><i class="fa fa-hand-o-right" aria-hidden="true"></i><span class="ml-2">Ride Picked: {serviceRoute}</span></p>
+                                            <p className="mb-3"><i className="fa fa-hand-o-right" aria-hidden="true"></i><span className="ml-2">Ride Picked: {serviceRoute}</span></p>
                                             <label htmlFor="pickup" className="lit-14">Pick-up Point</label>
                                             <div className="input-field">
                                                 <input className="px-4 py-3 mb-2 text-black border border-transparent rounded lit-14" type="text" name="pickup" onBlur={e => setOrigin(e.target.value)} placeholder="Enter pick-up location" autoComplete="on"/>

@@ -16,19 +16,36 @@ import RideSearch from './Components/RideSearch/RideSearch.js';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Contact from './Components/Contact/Contact.js';
 import NotFound from './Components/NotFound/NotFound.js';
+import jwt_decode from "jwt-decode";
 import './App.css';
 
 export const UserContext = createContext();
 
 function App() {
-    const [loggedInUser, setLoggedInUser] = useState({
-        isSignedIn: false,
-        email: '',
-        name: '',
-        photo: '',
-        success: false,
-        error: ''
-    });
+    const getDecodedUser = () => {
+        const token = localStorage.getItem('token');
+        if (!token) {
+            return {
+                isSignedIn: false,
+                email: '',
+                name: '',
+                photo: '',
+                success: false,
+                error: ''
+            };
+        }
+        const {name, email, picture} = jwt_decode(token);
+        const decodedUser = {
+            isSignedIn: true,
+            email: email,
+            photo: picture,
+            success: true,
+            name: (name.split(' '))[0]
+        }
+        return decodedUser;
+    }
+
+    const [loggedInUser, setLoggedInUser] = useState(getDecodedUser());
 
     return (
         <div className="App">

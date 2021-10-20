@@ -43,14 +43,21 @@ const Login = () => {
                 name: (displayName.split(' '))[0]
             };
 
-            console.log(user);
-            // console.log(signedInUser);
-
             setLoggedInUser(signedInUser);
+            setUserToken();
             history.replace(from);
         }).catch((error) => {
             const errorMessage = error.message;
             console.log(errorMessage);
+        });
+    }
+
+    const setUserToken = () => {
+        firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
+            localStorage.setItem('token', idToken);
+            console.log(idToken);
+        }).catch((error) => {
+            console.log(error);
         });
     }
 

@@ -14,6 +14,7 @@ const Header = () => {
     const handleSignOut = () => {
         firebase.auth().signOut()
         .then((res) => {
+          localStorage.removeItem('token');
           const signedOutUser = {
             isSignedIn: false,
             name: '',
