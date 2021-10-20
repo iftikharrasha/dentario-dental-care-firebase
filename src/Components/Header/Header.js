@@ -47,7 +47,7 @@ const Header = () => {
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="ml-auto medi--20 menu">
                                 <Nav.Link className="mr-4 c-tag-2" as={Link} to="/home">Home</Nav.Link>
-                                <Nav.Link className="mr-4 c-tag-2" as={Link} to="/service">Service</Nav.Link>
+                                <Nav.Link className="mr-4 c-tag-2" as={Link} to="/service">Services</Nav.Link>
                                 <Nav.Link className="mr-4 c-tag-2" as={Link} to="/contact">Contact</Nav.Link>
                                 {
                                     loggedInUser.isSignedIn ? <Dropdown>

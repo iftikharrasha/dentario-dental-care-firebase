@@ -6,15 +6,8 @@ import {
 } from "react-router-dom";
 import ScrollToTop from './ScrollToTop.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import { Button } from 'react-bootstrap';
-import {
-  CSSTransition,
-  TransitionGroup,
-} from 'react-transition-group';
-import LazyLoad from './Components/LayLoadSpinner/LazyLoadSpinner';
-import './App.css';
-
 import Header from './Components/Header/Header.js';
+import Home from './Components/Home/Home.js';
 import GetRide from './Components/GetRide/GetRide.js';
 import Login from './Components/Login/Login.js';
 import SignUp from './Components/SignUp/SignUp.js';
@@ -22,9 +15,8 @@ import Footer from './Components/Footer/Footer.js';
 import RideSearch from './Components/RideSearch/RideSearch.js';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Contact from './Components/Contact/Contact.js';
-
-const Home = lazy(() => import('./Components/Home/Home.js'));
-const NotFound = lazy(() => import('./Components/NotFound/NotFound'));
+import NotFound from './Components/NotFound/NotFound.js';
+import './App.css';
 
 export const UserContext = createContext();
 
@@ -45,13 +37,6 @@ function App() {
                 <Router>
                     <ScrollToTop>
                         <Route render={({location}) => (
-                            <TransitionGroup>
-                                <CSSTransition
-                                key={location.key}
-                                timeout={300}
-                                classNames="fade"
-                                >
-                                <Suspense fallback={<LazyLoad></LazyLoad>}>
                                     <Switch location={location}>
                                         <Route exact path="/">
                                             <Header></Header>
@@ -86,9 +71,6 @@ function App() {
                                             <NotFound></NotFound>
                                         </Route>
                                     </Switch>
-                                    </Suspense>
-                                </CSSTransition>
-                            </TransitionGroup>
                         )} />
                     </ScrollToTop>
                 </Router>
