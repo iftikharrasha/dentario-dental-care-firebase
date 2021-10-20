@@ -25,6 +25,13 @@
     height: 36px;
 }
 
+.big-img {
+    background: url('../../img/big.webp') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 688px;
+}
+
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
     .hero-bg {

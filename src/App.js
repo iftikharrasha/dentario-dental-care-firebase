@@ -8,16 +8,19 @@ import ScrollToTop from './ScrollToTop.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/Header/Header.js';
 import Home from './Components/Home/Home.js';
-import GetRide from './Components/GetRide/GetRide.js';
+import GetService from './Components/GetService/GetService.js';
 import Login from './Components/Login/Login.js';
 import SignUp from './Components/SignUp/SignUp.js';
 import Footer from './Components/Footer/Footer.js';
-import RideSearch from './Components/RideSearch/RideSearch.js';
+import ServiceSearch from './Components/ServiceSearch/ServiceSearch.js';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Contact from './Components/Contact/Contact.js';
 import NotFound from './Components/NotFound/NotFound.js';
 import jwt_decode from "jwt-decode";
 import './App.css';
+import Faq from './Components/Faq/Faq.js';
+import About from './Components/About/About.js';
+import BigImg from './Components/BigImg/BigImg.js';
 
 export const UserContext = createContext();
 
@@ -58,14 +61,16 @@ function App() {
                                         <Route exact path="/">
                                             <Header></Header>
                                             <Home></Home>
-                                            <GetRide></GetRide>
+                                            <GetService></GetService>
+                                            <BigImg></BigImg>
                                             <Contact></Contact>
                                             <Footer></Footer>
                                         </Route>
                                         <Route path="/home">
                                             <Header></Header>
                                             <Home></Home>
-                                            <GetRide></GetRide>
+                                            <GetService></GetService>
+                                            <BigImg></BigImg>
                                             <Contact></Contact>
                                             <Footer></Footer>
                                         </Route>
@@ -79,9 +84,19 @@ function App() {
                                             <SignUp></SignUp>
                                             <Footer></Footer>
                                         </Route>
-                                        <PrivateRoute path="/ride-search/:serviceRoute">
+                                        <Route path="/about">
                                             <Header></Header>
-                                            <RideSearch></RideSearch>
+                                            <About></About>
+                                            <Footer></Footer>
+                                        </Route>
+                                        <Route path="/faq">
+                                            <Header></Header>
+                                            <Faq></Faq>
+                                            <Footer></Footer>
+                                        </Route>
+                                        <PrivateRoute path="/service-search/:serviceRoute">
+                                            <Header></Header>
+                                            <ServiceSearch></ServiceSearch>
                                             <Footer></Footer>
                                         </PrivateRoute>
                                         <Route path="*">

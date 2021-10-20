@@ -23,7 +23,7 @@ const Home = () => {
                                             <p className="py-3 c-tag-1 lit-20">We provide state-of-the-art dental care in a comfortable.
                                             </p>
                                             <div className="login-btn pt-3">
-                                                <a href="#getride" className="btn-tag-1 medi-14">
+                                                <a href="#getservice" className="btn-tag-1 medi-14">
                                                     <i className="fa fa fa-search"></i>
                                                     <span className="ml-2">Find a dentist</span>
                                                 </a>

@@ -47,9 +47,9 @@ const Header = () => {
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" className="toggler"/>
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="ml-auto medi--20 menu">
-                                <Nav.Link className="mr-4 c-tag-2" as={Link} to="/home">Home</Nav.Link>
-                                <Nav.Link className="mr-4 c-tag-2" as={Link} to="/service">Services</Nav.Link>
-                                <Nav.Link className="mr-4 c-tag-2" as={Link} to="/contact">Contact</Nav.Link>
+                                <Nav.Link className="mr-4 c-tag-1" as={Link} to="/home">Home</Nav.Link>
+                                <Nav.Link className="mr-4 c-tag-1" as={Link} to="/about">About</Nav.Link>
+                                <Nav.Link className="mr-4 c-tag-1" as={Link} to="/faq">FAQ</Nav.Link>
                                 {
                                     loggedInUser.isSignedIn ? <Dropdown>
                                                                 <Dropdown.Toggle variant="" id="dropdown-basic" className="d-flex align-items-center">
